@@ -45,5 +45,23 @@ public class TestCacheInitializer extends TestCase {
 			.initialize(config);
 		assertEquals(150, config.getTimeToIdleSeconds());
 	}
+	
+	public void testStringValue() {
+		initializer.configure("name=other")
+			.initialize(config);
+		assertEquals("other", config.getName());
+	}
+	
+	public void testIntValue() {
+		initializer.configure("maxElementsOnDisk=150")
+			.initialize(config);
+		assertEquals(150, config.getMaxElementsOnDisk());
+	}
+	
+	public void testBooleanValue() {
+		initializer.configure("eternal=true")
+			.initialize(config);
+		assertEquals(true, config.isEternal());
+	}
 	 
 }
