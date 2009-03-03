@@ -173,6 +173,11 @@ public class MockUsageSessionService implements UsageSessionService
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	public void cleanupSessions() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 
